@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ValidationRequest implements Serializable{
+public class ValidationRequest implements Serializable {
 
     @XmlElement(required = true)
     private SourceSystemId sourceSystemId;
@@ -24,6 +24,10 @@ public class ValidationRequest implements Serializable{
     private String xsdName;
     @XmlElement(required = true)
     private String messageId;
+    @XmlElement(required = true)
+    private byte[] xsdFile;
+    @XmlElement(required = true)
+    private byte[] xmlFile;
 
     public SourceSystemId getSourceSystemId() {
         return sourceSystemId;
@@ -63,5 +67,21 @@ public class ValidationRequest implements Serializable{
 
     public void setMessageId(String messageId) {
         this.messageId = messageId;
+    }
+
+    public byte[] getXsdFile() {
+        return xsdFile;
+    }
+
+    public void setXsdFile(byte[] xsdFile) {
+        this.xsdFile = xsdFile;
+    }
+
+    public byte[] getXmlFile() {
+        return xmlFile;
+    }
+
+    public void setXmlFile(byte[] xmlFile) {
+        this.xmlFile = xmlFile;
     }
 }
