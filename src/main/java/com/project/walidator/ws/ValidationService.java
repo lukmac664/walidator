@@ -1,5 +1,6 @@
 package com.project.walidator.ws;
 
+import com.project.walidator.domain.RetrieveValidationResultRequest;
 import com.project.walidator.domain.ValidationRequest;
 import com.project.walidator.domain.ValidationResponse;
 
@@ -15,4 +16,7 @@ public interface ValidationService {
 
     @WebMethod(operationName = "validateXml")
     public ValidationResponse validateXml(@WebParam(name = "validationRequest") ValidationRequest validationRequest);
+
+    @WebMethod(operationName = "findValidationResult")
+    public ValidationResponse valifindValidationResultdateXml(@WebParam(name = "RetrieveValidationResultRequest") RetrieveValidationResultRequest retrieveValidationResultRequest);
 }

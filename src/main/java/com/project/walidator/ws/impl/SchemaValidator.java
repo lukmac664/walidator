@@ -25,7 +25,7 @@ public class SchemaValidator  {
         } catch (SAXException e) {
             String message = "Given data did not pass schema validation.";
             log.error(message, e);
-            //throw new XmlSchemaValidationException(message);
+            return false;
         }
         if (log.isDebugEnabled()) {
             log.debug("Schema validation -> is valid true");

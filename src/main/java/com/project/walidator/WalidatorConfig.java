@@ -17,7 +17,7 @@ import javax.xml.ws.Endpoint;
 @EnableAutoConfiguration
 @EnableWs
 @Configuration
-public class PersistenceConfig {
+public class WalidatorConfig {
     @Autowired
     private Bus bus;
 

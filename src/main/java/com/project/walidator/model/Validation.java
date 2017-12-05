@@ -1,6 +1,5 @@
 package com.project.walidator.model;
 
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.sql.Blob;
