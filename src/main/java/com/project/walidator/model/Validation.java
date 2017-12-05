@@ -1,5 +1,7 @@
 package com.project.walidator.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import java.sql.Blob;
 
@@ -25,6 +27,9 @@ public class Validation {
 
     @Column(name = "MESSAGE_ID")
     private String messageId;
+
+    @Column( name ="IS_VALID")
+    boolean isValid;
 
     @Lob
     @Column(name = "XSD_BLOB")
@@ -88,5 +93,13 @@ public class Validation {
 
     public void setXmlFile(Blob xmlFile) {
         this.xmlFile = xmlFile;
+    }
+
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
     }
 }
